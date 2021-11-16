@@ -1,5 +1,3 @@
-
-
 n = input()
 k = input()
 sum = 1
