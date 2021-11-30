@@ -1,3 +1,8 @@
-x=5
-if x==5: print("thd",x)
-elif x>3: print("yey")
+prime_numbers = [11, 3, 7, 5, 2]
+
+# sort the list
+prime_numbers.sort()
+prime_numbers.reverse()
+print(prime_numbers)
+
+# Output: [2, 3, 5, 7, 11]
