@@ -19,7 +19,7 @@ for key2, val2 in d2.items():
 #for (key1, val1), (key2, val2) in zip(d1.items(), d2.items()):
   #  if key1  in d2 and val1 !=val2:
   #      list = val1,val2
-   #     result = {key1: list }
+    #     result = {key1: list }
 if result:
     print(sorted(result.items()))
 else:
