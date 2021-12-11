@@ -5,4 +5,4 @@ def find_element_in_list(element, list_element):
     except ValueError:
         return None
 list = [1,2,3,4,5]
-print(find_element_in_list(3,list))
+print(find_element_in_list(6,list))
