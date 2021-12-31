@@ -1,5 +1,5 @@
 
-from Project_ATM_Database import customer_pin
+from Project_ATM_Database import customer_pin, customer_balance
 
 
 def validate_pin(cust_id):
@@ -12,3 +12,7 @@ def validate_pin(cust_id):
             print("Invalid pin\n")
             x = False
     return x
+
+def show_balance(cust_id):
+    balance = customer_balance[cust_id]
+    print(f"Your current balance is: {balance}")
