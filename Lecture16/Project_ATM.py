@@ -1,7 +1,7 @@
-from ATM_Management import validate_pin, show_balance, enter_option
-
+from ATM_Management import validate_pin, show_balance, enter_option, withdraw, deposit
 
 from Project_ATM_Database import customer_id
+
 customer_name = input("Please enter your name\n")
 if customer_name in customer_id.keys():
     customer_id_number = customer_id[customer_name]
@@ -10,6 +10,8 @@ if customer_name in customer_id.keys():
         enter_option()
 
         show_balance(customer_id_number)
+        withdraw(customer_id_number)
+        deposit(customer_id_number)
     else:
         print("Your card has been blocked")
 else:

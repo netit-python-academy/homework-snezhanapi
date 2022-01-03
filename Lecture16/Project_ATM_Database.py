@@ -1,4 +1,3 @@
-from ATM_Management import show_balance
 
 customer_id = {
     "Mike": 1,
@@ -14,7 +13,4 @@ customer_balance = {
     1: 600.25,
     2: 5000.00,
     3: 1500.50
-}
-options = {
-    "show": show_balance()
 }
