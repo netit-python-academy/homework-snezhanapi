@@ -1,4 +1,4 @@
-from ATM_Management import validate_pin, show_balance, enter_option, withdraw, deposit
+from ATM_Management import validate_pin, show_balance, enter_option, withdraw, deposit, myMain
 
 from Project_ATM_Database import customer_id
 
@@ -7,8 +7,8 @@ if customer_name in customer_id.keys():
     customer_id_number = customer_id[customer_name]
     is_pin_valid = validate_pin(customer_id_number)
     if is_pin_valid:
-        enter_option()
 
+        myMain(enter_option())
         show_balance(customer_id_number)
         withdraw(customer_id_number)
         deposit(customer_id_number)

@@ -21,20 +21,24 @@ def enter_option():
     if input_option.lower() in options.keys():
         action = options[input_option.lower()]
         print(action)
+        return action
     else:
         print("Invalid option")
+        exit
 
 
 def show_balance(cust_id):
     balance = customer_balance[cust_id]
     print(f"Your current balance is: {balance}")
 
+
 def validate_input_amount(input_amount):
-    if  input_amount.isdigit():
+    if input_amount.isdigit():
         return True
     else:
         print("Invalid input")
         return True
+
 
 def withdraw(cust_id):
     balance = customer_balance[cust_id]
@@ -46,6 +50,7 @@ def withdraw(cust_id):
         else:
             print("Non-sufficient funds")
 
+
 def deposit(cust_id):
     balance = customer_balance[cust_id]
     deposit_amount = input("Please enter amount to deposit:\n")
@@ -56,7 +61,10 @@ def deposit(cust_id):
 
 options = {
     "balance": show_balance,
-    "withdraw": withdraw
+    "withdraw": withdraw,
+    "deposit": deposit
 }
 
 
+def myMain(action):
+    options[action]()
