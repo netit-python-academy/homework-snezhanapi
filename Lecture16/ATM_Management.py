@@ -1,7 +1,5 @@
 from Project_ATM_Database import customer_pin, customer_balance
 
-global action
-
 
 def validate_pin(cust_id):
     for i in range(0, 3):
@@ -20,11 +18,11 @@ def enter_option():
     input_option = input("Please choose an option\n")
     if input_option.lower() in options.keys():
         action = options[input_option.lower()]
-        print(action)
+
         return action
     else:
         print("Invalid option")
-        exit
+
 
 
 def show_balance(cust_id):
@@ -46,7 +44,7 @@ def withdraw(cust_id):
     if validate_input_amount(withdraw_amount):
         if float(withdraw_amount) <= balance:
             final_balance = balance - float(withdraw_amount)
-            print(f"Your current balance is: {final_balance}")
+            print(f"Your new balance is: {final_balance}")
         else:
             print("Non-sufficient funds")
 
@@ -56,13 +54,13 @@ def deposit(cust_id):
     deposit_amount = input("Please enter amount to deposit:\n")
     if validate_input_amount(deposit_amount):
         final_balance = balance + float(deposit_amount)
-        print(f"Your current balance is: {final_balance}")
+        print(f"Your new balance is: {final_balance}")
 
 
 options = {
-    "balance": show_balance,
-    "withdraw": withdraw,
-    "deposit": deposit
+    "balance": "show_balance",
+    "withdraw": "withdraw",
+    "deposit": "deposit"
 }
 
 
